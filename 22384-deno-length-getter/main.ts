@@ -7,13 +7,9 @@ export class SetWithContentEquality<T extends object> {
   }
 
   clone() {
-    const v = new SetWithContentEquality(this.keyFn());
+    const v = new SetWithContentEquality(this.getKey);
     v.items = [...this.items];
     return v;
-  }
-
-  keyFn() {
-    return this.getKey;
   }
 
   add(item: T): void {
@@ -67,7 +63,4 @@ export class SetWithContentEquality<T extends object> {
   get length(): number {
     return this.items.length;
   }
-}
-export function add(a: number, b: number): number {
-  return a + b;
 }
