@@ -10,3 +10,24 @@ export function Button(props: JSX.HTMLAttributes<HTMLButtonElement>) {
     />
   );
 }
+
+export const GroupItems = (
+  { prefix, value, postfix, title }: {
+    prefix: string; // <- From here Shift-F12 won't discover the usage
+    value: number;
+    postfix: string;
+    title: string;
+  },
+) => {
+  return (
+    <>
+      <span title={title}>
+        {prefix}
+        <span>
+          {value}
+          {postfix}
+        </span>
+      </span>
+    </>
+  );
+};
