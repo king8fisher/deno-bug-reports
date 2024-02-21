@@ -1,4 +1,5 @@
 import { useSignal } from "@preact/signals";
+import { GroupItems } from "../components/Button.tsx";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
           <code class="mx-2">./routes/index.tsx</code> file, and refresh.
         </p>
         <Counter count={count} />
+        <GroupItems postfix="" prefix="" title="" value={5} />
       </div>
     </div>
   );
